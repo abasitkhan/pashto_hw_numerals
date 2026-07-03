@@ -114,6 +114,37 @@ with open("data/label_map.json") as f:
 ```
 
 ---
+### Load Pickle from GitHub
+
+```python
+import requests
+import pickle
+from io import BytesIO
+
+url = "https://raw.githubusercontent.com/abasitkhan/pashto_hw_numerals/main/data/pashto_ocr.pkl"
+
+response = requests.get(url)
+images, labels = pickle.load(BytesIO(response.content))
+```
+
+### Load Label Map from GitHub
+
+```python
+import requests
+
+url = "https://raw.githubusercontent.com/abasitkhan/pashto_hw_numerals/main/data/labels.json"
+
+label_map = requests.get(url).json()
+```
+
+### Get the Text Label
+
+```python
+label = labels[0]
+print(label)                  # Numeric class ID
+print(label_map[str(label)])  # Corresponding Pashto numeral name
+
+
 
 ## Applications
 
