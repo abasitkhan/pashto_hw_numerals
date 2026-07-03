@@ -1,4 +1,4 @@
-# Pashto Handwritten Numerals OCR Dataset
+# Standardized Handwritten Pashto Numeral Dataset
 
 ## Overview
 This repository contains a structured dataset for Pashto handwritten numeral recognition, prepared for machine learning and computer vision research. The dataset is provided in efficient binary formats to support fast loading and training workflows.
